@@ -109,8 +109,7 @@ solve2 a b = if (a /= 0) then (True,(-b)/a)
 
 
 isParallel :: (Double,Double)->(Double,Double)->(Double,Double)->(Double,Double)->Bool --2(6)
-isParallel (a,b) (c,d) (e,f) (g,h) = if (c-a)/(g-e) == (d-b)/(h-f) then
-                                     True 
+isParallel (a,b) (c,d) (e,f) (g,h) = if (c-a)/(g-e) == (d-b)/(h-f) then True 
                                      else False
 
 
@@ -121,9 +120,9 @@ isIncluded a b a1 b2 | (a^2-b^2 == a1^2-b^2) = show "Included"
 
 isRectangular :: (Double,Double)->(Double,Double)->(Double,Double)->Bool --2(8)
 isRectangular (a,a1) (b,b1) (c,c1) = if (b-a)*(c-a)+(b1-a1)*(c1-a1)== 0 ||
-                                     (a-b)*(c-b)+(a1-b1)*(c1-b1)== 0    || 
-                                     (a-c)*(b-c)+(a1-c1)*(b1-c1)==0  then True 
-                                                                    else False
+                                        (a-b)*(c-b)+(a1-b1)*(c1-b1)== 0 || 
+                                        (a-c)*(b-c)+(a1-c1)*(b1-c1)== 0 then True 
+                                                                        else False
 
 
 isTriangle :: Integer -> Integer -> Integer -> String --2(9)
