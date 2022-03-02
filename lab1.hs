@@ -126,10 +126,10 @@ isRectangular (a,a1) (b,b1) (c,c1) = if (b-a)*(c-a)+(b1-a1)*(c1-a1)== 0 ||
 
 
 isTriangle :: Integer -> Integer -> Integer -> String --2(9)
-isTriangle a b c | (a+b)<c || (a+c)<b || (b+c)<a = "Da"
-                 | (a+b)>c || (a+c)>b || (b+c)>a = "Net"
+isTriangle a b c | (a+b)<c || (a+c)<b || (b+c)<a = show "Net"
+                 | (a+b)>c || (a+c)>b || (b+c)>a = show "Da"
 
 
-isSorted :: Integer -> Integer -> Integer -> String --2(10)
-isSorted a b c | (a<b && b<c) || (a>b && b>c) = "Da"
-               | (a<b && b>c) || (a>b && b<c) = "Net" 
+isSorted :: Integer -> Integer -> Integer -> Bool --2(10)
+isSorted a b c = if (a<b && b<c) || (a>b && b>c) then True 
+                 else False
